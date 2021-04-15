@@ -4,7 +4,7 @@ cat << EOF > /etc/modprobe.d/nested.conf
 options kvm-intel nested=y
 EOF
 
-# jenkins-staging user
+# jenkins-staging user only
 useradd jenkins-staging -G mock
 mkdir -p /home/jenkins-staging/.ssh
 chmod 700 /home/jenkins-staging/.ssh
