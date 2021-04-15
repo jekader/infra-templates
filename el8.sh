@@ -3,6 +3,7 @@ yum -y install java-11-openjdk-headless git mock python3-pyyaml python3-pyxdg py
 cat << EOF > /etc/modprobe.d/nested.conf
 options kvm-intel nested=y
 EOF
+
 # jenkins-staging user
 useradd jenkins-staging -G mock
 mkdir -p /home/jenkins-staging/.ssh
