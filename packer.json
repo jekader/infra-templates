@@ -1,0 +1,28 @@
+{
+    "builders": [
+        {
+            "type": "openstack",
+            "username": "$OS_USERNAME",
+            "password": "$OS_PASSWORD",
+            "domain_name": "$OS_DOMAIN_NAME",
+            "identity_endpoint": "$OS_AUTH_URL",
+            "image_name": "My Custom Image",
+	    "ssh_username": "centos",
+            "source_image": "fa55b13c-9b7f-4a00-85ad-3acdd805d3f2",
+            "flavor": "e7ca6bcd-e582-4468-a1fb-2543190b366f",
+            "ssh_ip_version": "4",
+            "networks": [
+                "186a5fd1-13c6-433e-bfaa-a5018e7d4210"
+            ],
+	    "floating_ip_pool": "Internet",
+	    "use_floating_ip": true,
+            "insecure": true
+        }
+    ],
+    "provisioners": [
+        {
+            "script": "el8.sh",
+            "type": "shell"
+        }
+    ]
+}
