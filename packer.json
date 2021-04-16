@@ -2,10 +2,10 @@
     "builders": [
         {
             "type": "openstack",
-            "username": "$OS_USERNAME",
-            "password": "$OS_PASSWORD",
-            "domain_name": "$OS_DOMAIN_NAME",
-            "identity_endpoint": "$OS_AUTH_URL",
+            "username": "{{env `OS_USERNAME`}}",
+            "password": "{{env `OS_PASSWORD`}}",
+            "domain_name": "{{env `OS_DOMAIN_NAME`}}",
+            "identity_endpoint": "{{env `OS_AUTH_URL`}}",
             "image_name": "My Custom Image",
 	    "ssh_username": "centos",
             "source_image": "fa55b13c-9b7f-4a00-85ad-3acdd805d3f2",
