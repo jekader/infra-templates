@@ -5,7 +5,7 @@
     "domain_name": "{{env `OS_DOMAIN_NAME`}}",
     "identity_endpoint": "{{env `OS_AUTH_URL`}}",
     "region": "{{env `OS_REGION_NAME`}}",
-    "image_name":  "{{env `OS_IMAGE_NAME`}}
+    "image_name":  "{{env `OS_IMAGE_NAME`}}"
   },
 
 	
