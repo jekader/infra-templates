@@ -4,8 +4,7 @@
     "password": "{{env `OS_PASSWORD`}}",
     "domain_name": "{{env `OS_DOMAIN_NAME`}}",
     "identity_endpoint": "{{env `OS_AUTH_URL`}}",
-    "region": "{{env `OS_REGION_NAME`}}",
-    "image_name":  "{{env `OS_IMAGE_NAME`}}"
+    "region": "{{env `OS_REGION_NAME`}}"
   },
 
 	
@@ -15,6 +14,7 @@
             "type": "openstack",
 	    "ssh_username": "centos",
             "source_image": "fa55b13c-9b7f-4a00-85ad-3acdd805d3f2",
+	    "image_name": "el8-worker-by-packer",
             "flavor": "e7ca6bcd-e582-4468-a1fb-2543190b366f",
             "ssh_ip_version": "4",
             "networks": [
