@@ -7,8 +7,6 @@
     "region": "{{env `OS_REGION_NAME`}}"
   },
 
-	
-	
     "builders": [
         {
             "type": "openstack",
