@@ -38,7 +38,7 @@
             "type": "shell",
             "inline": "echo DONE",
             "pause_before": "40s"
-        },
+        }
     ]
 }
 
