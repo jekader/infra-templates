@@ -52,4 +52,4 @@ chmod 0644 /etc/modprobe.d/nested.conf /etc/selinux/config /etc/security/limits.
 #systemctl enable ovirt-guest-agent
 systemctl mask cloud-init-local
 systemctl mask cloud-init
-rm -rf /etc/hostname
+#rm -rf /etc/hostname
