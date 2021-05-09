@@ -27,7 +27,8 @@
         {
             "execute_command": "sudo sh -eux '{{.Path}}'",
             "script": "el7.sh",
-            "type": "shell"
+            "type": "shell",
+            "expect_disconnect": true
         }
     ]
 }
