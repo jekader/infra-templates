@@ -28,8 +28,12 @@
             "execute_command": "sudo sh -eux '{{.Path}}'",
             "script": "el7.sh",
             "type": "shell",
-            "expect_disconnect": true
-        }
+        },
+	{
+	    "type": "shell",
+            "inline": "sudo reboot",
+            "expect_disconnect": true            
+	} 	    
     ]
 }
 
