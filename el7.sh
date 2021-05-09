@@ -1,5 +1,5 @@
 yum -y install https://dl.fedoraproject.org/pub/epel/epel-release-latest-7.noarch.rpm
-pkg_list=(epel-release ovirt-guest-agent-common java-1.8.0-openjdk-headless kernel gdbm glibc sssd systemd git mock PyYAML python2-pyxdg python2-six)
+pkg_list=(epel-release java-1.8.0-openjdk-headless kernel gdbm glibc sssd systemd git mock PyYAML python2-pyxdg python2-six)
 pkg_list+=(python-paramiko PyYAML python2-pyxdg python-jinja2 python-py python-six python36-PyYAML python36-pyxdg rpm-libs)
 pkg_list+=(firewalld haveged libvirt qemu-kvm-rhev nosync libselinux-utils kmod)
 
@@ -48,12 +48,8 @@ EOF
 
 chmod 0644 /etc/modprobe.d/nested.conf /etc/selinux/config /etc/security/limits.d/10-nofile.conf
 
-systemctl start ovirt-guest-agent
-systemctl enable ovirt-guest-agent
+#systemctl start ovirt-guest-agent
+#systemctl enable ovirt-guest-agent
 systemctl mask cloud-init-local
 systemctl mask cloud-init
 rm -rf /etc/hostname
-
-reboot
-
-echo "continue script execution"
