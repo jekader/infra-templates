@@ -55,3 +55,5 @@ systemctl mask cloud-init
 rm -rf /etc/hostname
 
 reboot
+
+echo "continue script execution"
