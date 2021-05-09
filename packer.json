@@ -27,13 +27,18 @@
         {
             "execute_command": "sudo sh -eux '{{.Path}}'",
             "script": "el7.sh",
-            "type": "shell",
+            "type": "shell"
         },
 	{
 	    "type": "shell",
             "inline": "sudo reboot",
             "expect_disconnect": true            
-	} 	    
+	},
+        {
+            "type": "shell",
+            "inline": "echo DONE",
+            "pause_before": "40s"
+        },
     ]
 }
 
