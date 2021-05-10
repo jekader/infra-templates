@@ -1,7 +1,7 @@
 yum -y install https://dl.fedoraproject.org/pub/epel/epel-release-latest-7.noarch.rpm
 pkg_list=(epel-release java-1.8.0-openjdk-headless kernel gdbm glibc sssd systemd git mock PyYAML python2-pyxdg python2-six)
 pkg_list+=(python-paramiko PyYAML python2-pyxdg python-jinja2 python-py python-six python36-PyYAML python36-pyxdg rpm-libs)
-pkg_list+=(firewalld haveged libvirt qemu-kvm-rhev nosync libselinux-utils kmod)
+pkg_list+=(haveged libvirt qemu-kvm-rhev nosync libselinux-utils kmod)
 
 yum -y install "${pkg_list[@]}"
 
@@ -41,12 +41,12 @@ cat << EOF > /etc/security/limits.d/10-nofile.conf
 * hard nofile 96000
 EOF
 
-cat << EOF > /etc/selinux/config
-SELINUX=permissive
-SELINUXTYPE=targeted
-EOF
+#cat << EOF > /etc/selinux/config
+#SELINUX=permissive
+#SELINUXTYPE=targeted
+#EOF
 
-chmod 0644 /etc/modprobe.d/nested.conf /etc/selinux/config /etc/security/limits.d/10-nofile.conf
+chmod 0644 /etc/modprobe.d/nested.conf /etc/security/limits.d/10-nofile.conf #/etc/selinux/config
 
 #systemctl start ovirt-guest-agent
 #systemctl enable ovirt-guest-agent
