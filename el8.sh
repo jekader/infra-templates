@@ -32,3 +32,4 @@ chown -R jenkins-staging:jenkins-staging /home/jenkins-staging
 chown -R jenkins:jenkins /home/jenkins
 chmod 600 /home/{jenkins-staging,jenkins}/.ssh/authorized_keys
 alternatives --set python /usr/bin/python3
+
