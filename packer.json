@@ -13,6 +13,7 @@
 	    "ssh_username": "centos",
             "source_image": "<IMAGE_ID>",
 	    "image_name": "<ARTIFACT_NAME>",
+	    "image_visibility": "public",
             "flavor": "e7ca6bcd-e582-4468-a1fb-2543190b366f",
             "ssh_ip_version": "4",
             "networks": [
