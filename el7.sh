@@ -48,6 +48,9 @@ EOF
 
 chmod 0644 /etc/modprobe.d/nested.conf /etc/security/limits.d/10-nofile.conf /etc/selinux/config
 
+#Remove MAC address to avoid boot failure for instances created from this template
+sed -i '/^HWADDR/d' /etc/sysconfig/network-scripts/ifcfg-*
+
 #systemctl start ovirt-guest-agent
 #systemctl enable ovirt-guest-agent
 systemctl mask cloud-init-local
